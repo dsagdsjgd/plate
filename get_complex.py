@@ -23,7 +23,7 @@ def main(i, j):
     mag_file = f"new_transfer/{i}-{j}幅度.txt"
     phase_file = f"new_transfer/{i}-{j}相位.txt"
     output_dir = "complex"
-    output_file = f"{output_dir}/{i}-{j}.txt"
+    output_file = f"{output_dir}/{i}-{j}.csv"  # 修改为 CSV
 
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -38,8 +38,9 @@ def main(i, j):
     complex_values = convert_to_complex(mag, phase)
 
     with open(output_file, 'w', encoding='utf-8') as f:
+        f.write("Frequency(Hz),Real,Imaginary\n")  # 写入表头
         for freq, val in zip(freq1, complex_values):
-            f.write(f"{freq:.6e} {val.real:.6e} {val.imag:.6e}\n")
+            f.write(f"{freq:.6e},{val.real:.6e},{val.imag:.6e}\n")
 
     print(f"转换完成: {output_file}")
 

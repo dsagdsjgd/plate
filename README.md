@@ -1,2 +1,9 @@
 # plate
-this is for all transfer function using swept sine
+this is for all transfer function using swept sine  
+# 文件的解释  
+# 数据文件夹  
+文件夹new_transfer中是原始数据，其中命名方法为先响应后驱动，也就是2（响应位置）-1（驱动位置）  
+其中“1-1粗糙的幅值/相位”是只有5个积分周期的结果  
+“1-2相位淘汰”是当时数据错误地记录了两次幅度的结果  
+“3-2幅度淘汰”是只有五个积分周期100个点的结果  
+# 

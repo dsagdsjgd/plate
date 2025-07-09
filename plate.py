@@ -17,8 +17,8 @@ def load_data(filepath):
                     continue  # 忽略无法解析的行
     return np.array(freqs), np.array(values)
 
-magnitude_file = r"2-1幅度.txt"
-phase_file = r"2-1相位.txt"
+magnitude_file = r"new_transfer/3-1幅度.txt"
+phase_file = r"new_transfer/3-1相位.txt"
 
 # 读取数据
 freqs_mag, mags_db = load_data(magnitude_file)

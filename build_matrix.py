@@ -1,6 +1,13 @@
 import numpy as np
 import pandas as pd
 
+"""
+file_matrix = np.array([
+    ["interpolated_data/3-3.csv", "complex/3-2.csv","complex/3-2.csv",],
+    ["complex/3-2.csv",        "interpolated_data/3-3.csv", "complex/3-2.csv",],
+    ["complex/3-2.csv",          "complex/3-2.csv",          "interpolated_data/3-3.csv",]
+], dtype=object)
+"""
 
 file_matrix = np.array([
     ["complex/1-1.csv", "complex/1-2.csv", "complex/1-3.csv"],

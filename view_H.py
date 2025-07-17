@@ -3,9 +3,12 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 
 # 加载数据
-data = np.load("minus_G_plus_I.npz", allow_pickle=True)
+data = np.load("transfer_functions.npz", allow_pickle=True)
+#data = np.load("X_matrices.npz", allow_pickle=True)
+#data = np.load("F_matrices.npz", allow_pickle=True)
 frequencies = data["frequencies"]
-H_matrix = data["M"]
+print("包含的键名：", data.files)
+H_matrix = data["H"]
 
 # 创建 PDF 文件
 with PdfPages("response_plots.pdf") as pdf:
